@@ -5,10 +5,12 @@ const Home = async () => {
   const view = `
     <div class="Characters">
       ${characters.results.map(character => `
-        <article class="Character-item">
+        <article class="card">
+            <img class="card-img-top" src="${character.image}" alt="${character.name}">
+            <div class="card-body">
           <a href="#/${character.id}/">
-            <img src="${character.image}" alt="${character.name}">
-            <h2>${character.name}</h2>
+            <h2 class="btn btn-primary center d-flex justify-content-center">${character.name}</h2>
+            </div>
           </a>
         </article>
       `).join('')}
